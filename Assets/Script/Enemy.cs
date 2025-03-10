@@ -31,7 +31,14 @@ public class Enemy : MonoBehaviour
         NumberofEnemies--;
         if (NumberofEnemies<=0)
         {
-            
+            StartCoroutine(GameOverNow());
+            Debug.Log("Herkes öldü");
         }  
+    }
+    IEnumerator GameOverNow()
+    {
+        yield return new WaitForSeconds(3f);
+        Bus_System.CallGameOver();
+        Debug.Log("gameoverienumarator");
     }
 }

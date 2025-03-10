@@ -14,9 +14,10 @@ public class Bird : MonoBehaviour
     bool isJumped;
     void Start()
     {
-         playerTransform = gameObject.transform;
-         isJumped = false;
-         Debug.Log(playerTransform.position.x);
+        Time.timeScale=1;
+        playerTransform = gameObject.transform;
+        isJumped = false;
+        Debug.Log(playerTransform.position.x);
     }
 
     void Update()

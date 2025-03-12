@@ -29,16 +29,13 @@ public class Enemy : MonoBehaviour
         particlesys.Play();
         Destroy(gameObject,0.1f);  
         NumberofEnemies--;
-        if (NumberofEnemies<=0)
-        {
-            StartCoroutine(GameOverNow());
-            Debug.Log("Herkes öldü");
-        }  
+        
+        
+            if (NumberofEnemies<=0)
+            {
+                Bus_System.CallGameOver();
+                Debug.Log("Herkes öldü");
+            }  
     }
-    IEnumerator GameOverNow()
-    {
-        yield return new WaitForSeconds(3f);
-        Bus_System.CallGameOver();
-        Debug.Log("gameoverienumarator");
-    }
+    
 }

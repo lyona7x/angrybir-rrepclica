@@ -17,6 +17,5 @@ public class Game_OverUI : MonoBehaviour
     {
         UI.SetActive(true);
         Time.timeScale=0;
-        Debug.Log("UI açıldı");
     }
 }
